@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  This is a starter component and can be deleted.
@@ -416,6 +418,7 @@ export function NxWelcome({ title }: { title: string }) {
       />
       <div className="wrapper">
         <div className="container">
+          <Button as="a" variant="primary">Button as a link</Button>
           <div id="welcome">
             <h1>
               <span> Hello there, </span>

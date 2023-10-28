@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+
 /*
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  This is a starter component and can be deleted.
@@ -6,6 +9,15 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  */
 export function NxWelcome({ title }: { title: string }) {
+  const [subtitle, setSubtitle] = useState('subtitle');
+
+  useEffect(() => {
+    console.log(`${NxWelcome.name} ${useEffect.name}`);
+    setSubtitle("new subtitle");
+  }, [
+    title, subtitle
+  ]);
+
   return (
     <>
       <style
@@ -416,6 +428,10 @@ export function NxWelcome({ title }: { title: string }) {
       />
       <div className="wrapper">
         <div className="container">
+          <Button as="a" variant="primary">
+            Button as link
+          </Button>
+          <h1>{subtitle}</h1>
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
